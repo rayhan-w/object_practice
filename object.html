@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object practice in javascript
+
+    </title>
+</head>
+<body>
+    
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+
+        <p id="demo5"></p>
+
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+
+
+
+
+<script>
+
+
+    let rayhan={
+        fullName: 'Rayhan Khan',
+        age:21,
+        adress: 'Chandnagor',
+        job: 'intern officer'
+    }
+
+    document.getElementById("demo1").innerHTML=rayhan.fullName;
+</script>
+
+
+
+
+<script>
+    const person ={
+        firstname: "Rahim",
+        age:"20",
+        size:"medium"
+    }
+
+    document.getElementById("demo2").innerHTML = person.firstname + " is " + person.age + " years old.";
+</script>
+<!-- for in loop -->
+<script>
+    let loop={
+        firstname:"Liza",
+        lastname:"Khan",
+        age:"20"
+    };
+
+    let txt = "";
+    for( let X in person){
+        txt += person[X] + " ";
+    }
+
+    document.getElementById("demo3").innerHTML= txt;
+
+</script>
+
+<!-- Adding in the object -->
+
+    <script>
+        const add ={
+            firstname:"Rayhan",
+            lastname:"khan",
+            age:"20"
+        }
+
+        add.nationality="Bangladeshi";
+        document.getElementById("demo4").innerHTML=
+        add.firstname + " is " + add.nationality + ".";
+    </script>
+
+    <!-- Delete items from the object -->
+
+    <script>
+        const man ={
+            firstname: "Ariz",
+            lastname: "khan", 
+            nationality:"bangladeshi"
+        }
+        delete man.lastname;
+        document.getElementById("demo5").innerHTML=
+        man.firstname + " "+ man.lastname;
+
+
+    </script>
+
+    <!-- object in object -->
+
+    <script>
+        const myObj = {
+  name: "Rayhan",
+  age: 21,
+ languages : {
+  language1: "HTML",
+  language2: "SCSS",
+  language1: "Javascript"
+  }
+}
+document.getElementById("demo6").innerHTML = myObj.languages.language2;
+    </script>
+<!-- Array in object -->
+    <script>
+        const objArr={
+                name:['Rayhan','Liza','Adnan'],
+                age:[10,20,30]
+        }
+
+        document.getElementById("demo7").innerHTML = objArr.name[2];
+    </script>
+
+    <!-- function -->
+    <script>
+        const people = {
+  firstName: "Ferox",
+  lastName: "roy",
+  
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+
+document.getElementById("demo8").innerHTML = people.fullName();
+    </script>
+
+    <script src="object.js"></script>
+</body>
+</html>
